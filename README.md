@@ -2,7 +2,7 @@
 
 Movie trailer website project, part of the Udacity [Machine Learning Foundation Nanodegree Program](https://in.udacity.com/course/machine-learning-engineer-nanodegree--nd009-infn).
 
-## What it is and What it does ?
+## About the Project
 
 A Python program that produces the HTML for a movie website that displays
 a number of movies. Click on a movie poster to play its trailer.
@@ -37,8 +37,6 @@ python entertainment_center.py
 The default browser should launch a new tab displaying the movie trailer website.
 
 ## Extra Features Description
-
-The following features were implemented to gain an extra credit from Udacity:
 
 * Added the storyline of the movie to the website.
 * Added the release date to the Movie class, which is also displayed on the website.
