@@ -38,6 +38,7 @@ The default browser should launch a new tab displaying the movie trailer website
 
 ## Extra Features Description
 
+* Used the Movie DB API to get the list of movies within a month to populate in the website.
 * Added the storyline of the movie to the website.
 * Added the release date to the Movie class, which is also displayed on the website.
 * Changed the background and text colour to create a dark theme for the website.
