@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 
 API_KEY = "f72b8cc0f8c7ab0a4ab50a2d5b16f32e"
 
+
 def create_movies(settings):
     """ Creates the movies to pass to the Fresh Tomatoes website.
 
@@ -25,7 +26,7 @@ def create_movies(settings):
                       API_KEY + "&primary_release_date.gte=" +
                       get_one_month_ago_url_param() +
                       "&primary_release_date.lte=" + get_today_url_param())
-    print  new_movies_url
+    print new_movies_url
     jsonurl = urllib.urlopen(new_movies_url)
     api = json.loads(jsonurl.read())
 
@@ -33,7 +34,8 @@ def create_movies(settings):
     i = 0
     for item in api['results']:
         # Check for the existence of backdrop_images
-        if item['backdrop_path'] is not None and item['poster_path'] is not None:
+        if item['backdrop_path'] is not None and
+        item['poster_path'] is not None:
             backdrop_url = (settings['secure_base_url'] +
                             settings['backdrop_sizes'][1] +
                             item['backdrop_path'])
@@ -44,7 +46,8 @@ def create_movies(settings):
 
             release_date = item['release_date']
 
-            movie = media.Movie(item['title'], image_url, item['overview'], i, item['id'], release_date, backdrop_url)
+            movie = media.Movie(item['title'], image_url, item['overview'], i,
+                                item['id'], release_date, backdrop_url)
             movies.insert(i, movie)
 
         i = i + 1
